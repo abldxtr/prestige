@@ -17,7 +17,11 @@
         "port": 3000
       },
       "restartOn": {
-        "files": ["./package-lock.json"]
+        "files": [
+          "./package-lock.json"
+        ],
+        "branch": false,
+        "resume": false
       }
     },
     "build": {
@@ -39,8 +43,28 @@
       "name": "Install Dependencies",
       "command": "npm install",
       "restartOn": {
-        "files": ["./package.json"]
+        "files": [
+          "./package.json"
+        ],
+        "branch": false,
+        "resume": false
       }
+    },
+    "tailwind-scrollbar": {
+      "name": "npm install --save-dev tailwind-scrollbar",
+      "command": "tailwind-scrollbar"
+    },
+    "npm install --save-dev tailwind-scrollbar": {
+      "name": "npm install --save-dev tailwind-scrollbar",
+      "command": "npm install --save-dev tailwind-scrollbar"
+    },
+    "npm install uuid": {
+      "name": "npm install uuid",
+      "command": "npm install uuid"
+    },
+    "npm i @reduxjs/toolkit": {
+      "name": "npm i @reduxjs/toolkit",
+      "command": "npm i @reduxjs/toolkit"
     }
   }
 }
