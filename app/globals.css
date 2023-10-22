@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .fbfb {
+    @apply text-[#FBFBFB];
+  }
+  .lip {
+    @apply cursor-pointer p-[8px] text-[rgb(155,_156,_161)] text-[16px] font-normal transition hover:text-[rgb(251,_251,_251)];
+  }
+  .buttonget {
+    @apply flex items-center justify-center rounded-[64px] border border-[#3b3b3b] bg-[#1f1f1f] px-[24px] py-[16px] text-lg 
+
+font-normal text-[#FBFBFB] transition hover:bg-[rgb(48_48_48)];
+  }
+  .buttonwhite {
+    @apply text-lg font-medium text-[rgb(15,15,15)] transition hover:bg-[rgb(219_219_219)];
+  }
+  .bgmain {
+    @apply bg-[url("https://framerusercontent.com/images/zL56H0ZkUI70RARs1Ty3RPV93M.svg")] bg-cover bg-center;
+  }
+  .doc {
+    @apply flex items-center font-medium leading-[1.2] text-[#fbfbfb] transition duration-300;
+  }
+  .avatar {
+    @apply h-[32px] rounded-full w-[32px]  border-[2px] border-[#ffffff] flex items-center relative overflow-hidden;
+  }
+  .img_avatar {
+    @apply absolute inset-0 object-cover;
+  }
+  .f600 {
+    @apply font-[600];
+  }
+  .mask-seq {
+    @apply [mask-image:linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 75%, rgba(0, 0, 0, 0) 100%)];
+  }
+}
