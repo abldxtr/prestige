@@ -1,9 +1,19 @@
 import "./globals.css";
-// import { Inter } from "next/font/google";
-import Provider from "./component/redux/provider";
+import { Inter } from "next/font/google";
+import Providers from "./component/redux/Providers";
+import { store } from "./component/redux/Redux";
 import P_header from "./component/prestige/P_header";
+import { Reactqueryprovider } from "./Provider-query.tsx";
 import { DM_Sans } from "next/font/google";
-import {} from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
 const dm_sans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dmsans",
@@ -15,6 +25,13 @@ export const metadata = {
   title: "Prestige",
   description: "my code is best baby",
 };
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false, // default: true
+    },
+  },
+});
 
 export default function RootLayout({
   children,
@@ -23,14 +40,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Provider>
+      <Reactqueryprovider>
         <body className={dm_sans.className}>
-          <div>
-            {/* <P_header /> */}
-            {children}
-          </div>
+          <Providers>
+            <div>
+              {/* <P_header /> */}
+              {children}
+            </div>
+          </Providers>
         </body>
-      </Provider>
+        {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+      </Reactqueryprovider>
     </html>
   );
 }
