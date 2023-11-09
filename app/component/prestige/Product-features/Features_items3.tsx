@@ -39,8 +39,8 @@ export default function Features_items3() {
 
   return (
     <div className="max-w-[920px]  mx-auto w-full ">
-      <div className="flex flex-col gap-[96px] ">
-        <div className="flex flex-col lg:flex-row flex-1 w-full relative items-center justify-around rounded-[32px] w-full py-[4px] border border-[rgb(36,36,36)] bg-[rgb(22,22,22)] ">
+      <div className="flex flex-col gap-[96px] will-change-auto ">
+        <div className="flex flex-col lg:flex-row flex-1 will-change-auto relative items-center justify-around rounded-[32px] w-full py-[4px] border border-[rgb(36,36,36)] bg-[rgb(22,22,22)] ">
           {feat_items3.map((item, index) => {
             return (
               <>

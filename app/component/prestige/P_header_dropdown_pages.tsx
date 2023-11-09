@@ -1,20 +1,4 @@
 export default function Dropdown_pages() {
-  ////Company
-  // About
-
-  // Blog
-
-  // Resources
-  // FAQ
-
-  // Contact
-
-  // Terms of service
-
-  // Privacy policy
-
-  // 404
-
   type dp = {
     header: string;
     body: string[];

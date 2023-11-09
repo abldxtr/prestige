@@ -4,16 +4,16 @@ import P_button from "./P_button";
 export default function Pmain() {
   return (
     <>
-      <div>
+      <div className="lg:max-w-7xl w-full mx-auto text-center ">
         <a
           href="/"
-          className="flex items-center gap-[8px] rounded-[32px] border border-[#236456] bg-[#112220] py-[4px] pl-[4px] pr-[8px]"
+          className="flex items-center w-fit justify-center mx-auto gap-[8px] rounded-[32px] border border-[#236456] bg-[#112220] py-[4px] pl-[4px] pr-[8px]"
         >
           <div className="rounded-[64px] bg-[#33c6ab] px-[8px] py-[4px] text-[#FFFFFF]">
             <p>New</p>
           </div>
 
-          <div className="flex items-center gap-[8px]">
+          <div className="flex items-center gap-[8px] ">
             <div className="text-[14px] font-medium leading-[1.2] text-[#33c6ab]">
               Introducing AI Editor
             </div>
@@ -26,8 +26,8 @@ export default function Pmain() {
         </a>
       </div>
 
-      <div>
-        <h1 className="text-center text-[64px] font-semibold leading-[1] text-[#fbfbfb] ">
+      <div className=" w-full mx-auto   ">
+        <h1 className="text-center md:text-[64px] text-[40px] lg:mx-w-5xl mx-auto w-full  font-semibold leading-[1] text-[#fbfbfb] ">
           The best way to build your startup.
         </h1>
       </div>

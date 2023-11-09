@@ -7,7 +7,6 @@ import { IconType } from "react-icons";
 import { TbAccessible, TbAdCircle, TbAperture } from "react-icons/tb";
 import P_dropdown from "../prestige/P_headers_dropdown";
 import Dropdown_pages from "./P_header_dropdown_pages";
-
 import { IoIosArrowDown } from "react-icons/io";
 export default function P_header() {
   const head_items = ["Product", "Pages", "Integration", "Blog", "Pricing"];
@@ -19,7 +18,7 @@ export default function P_header() {
   }
   return (
     <div className="fixed left-0 top-0 z-50 w-full border-b border-[#161616] bg-[rgb(15_15_15)]">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-[32px] py-[20px]">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-[32px] py-[16px]">
         {/* <!-- left --> */}
 
         <div>
@@ -31,13 +30,13 @@ export default function P_header() {
         {/* <!-- center --> */}
 
         <div className="">
-          <ul className="[&_li]:lip md:flex space-x-[4px] text-[#4e4d51] hidden ">
+          <ul className="[&_li]:lip md:flex space-x-[4px] text-[#4e4d51] hidden will-change-auto ">
             {head_items.map((item, index) => {
               return (
                 <>
                   <li
                     className={classNames(
-                      "group flex gap-[4px] ",
+                      "group will-change-auto flex gap-[4px] ",
                       menue === "Product" || menue === "Pages"
                         ? "relative"
                         : "",

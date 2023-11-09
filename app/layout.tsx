@@ -25,13 +25,6 @@ export const metadata = {
   title: "Prestige",
   description: "my code is best baby",
 };
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false, // default: true
-    },
-  },
-});
 
 export default function RootLayout({
   children,
@@ -44,7 +37,7 @@ export default function RootLayout({
         <body className={dm_sans.className}>
           <Providers>
             <div>
-              {/* <P_header /> */}
+              <P_header />
               {children}
             </div>
           </Providers>

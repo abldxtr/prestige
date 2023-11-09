@@ -1,10 +1,10 @@
 import { CgTally } from "react-icons/cg";
-import Features_items from "./Features_items";
+import Price_grid from "./Price_grid";
 
-export default function Features() {
+export default function Price() {
   return (
     <div className="mx-w-[1280px] mx-auto  ">
-      <div className="flex flex-col gap-[96px] items-center justify-center px-[30px] ">
+      <div className="flex flex-col gap-[96px] items-center justify-center  px-[20px] sm:px-[30px] ">
         {/* first col */}
         <div className="max-w-[768px] mx-auto text-center ">
           <div className="flex flex-col gap-[16px] items-center ">
@@ -13,22 +13,22 @@ export default function Features() {
               <div className="text-[#33c6ab] ">
                 <CgTally />
               </div>
-              <div className="text-[#33c6ab] text-[14px]  ">Features</div>
+              <div className="text-[#33c6ab] text-[14px]  ">Pricing</div>
             </div>
 
             {/* text h */}
             <div>
               <h2 className=" md:text-[48px] text-[32px] text-[#FBFBFB] font-semibold ">
-                Product features
+                OSupercharge your growth
               </h2>
             </div>
 
             {/* text p */}
             <div>
               <p className="text-[#9b9ca1] text-[18px] font-normal  ">
-                Discover an extensive suite of robust tools and functionalities
-                thoughtfully designed to enhance your interactions on our
-                platform.
+                Whether you're a small startup, a growing mid-sized business, or
+                a large enterprise, we have plans tailored to your specific
+                demands.
               </p>
             </div>
           </div>
@@ -36,8 +36,8 @@ export default function Features() {
 
         {/* second col */}
         <div className="w-full  ">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-[32px] w-full ">
-            <Features_items />
+          <div className="flex items-center justify-between ">
+            <Price_grid />
           </div>
         </div>
       </div>

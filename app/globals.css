@@ -14,7 +14,7 @@
     @apply cursor-pointer p-[8px] text-[rgb(155,_156,_161)] text-[16px] font-normal transition hover:text-[rgb(251,_251,_251)];
   }
   .buttonget {
-    @apply flex items-center justify-center rounded-[64px] border border-[#3b3b3b] bg-[#1f1f1f] px-[24px] py-[16px] text-lg 
+    @apply flex items-center justify-center rounded-[64px] border border-[#3b3b3b] bg-[#1f1f1f] px-[24px] py-[10px] text-lg 
 
 font-normal text-[#FBFBFB] transition hover:bg-[rgb(48_48_48)];
   }

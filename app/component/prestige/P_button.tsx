@@ -4,11 +4,11 @@ import Link from "next/link";
 export default function P_button() {
   return (
     <div className="py-[64px] w-full">
-      <div className="flex items-center justify-center gap-[32px] text-center">
+      <div className="flex items-center flex-col sm:flex-row justify-center gap-[32px] text-center">
         <Link
           href="/"
           className="flex items-center text-[rgb(15,_15,_15)] font-semibold
-           rounded-[64px] gap-[4px] border border-[rgb(0,0,0,0)] bg-[#fbfbfb] pr-[24px] pl-[30px] py-[18px] "
+           rounded-[64px] gap-[4px] border border-[rgb(0,0,0,0)] bg-[#fbfbfb] pr-[23px] pl-[29px] py-[17px] "
         >
           Get started
           <MdKeyboardArrowLeft className="rotate-180  w-[22px] h-[22px]  " />

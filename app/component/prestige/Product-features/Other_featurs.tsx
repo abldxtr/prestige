@@ -17,7 +17,7 @@ export default function Other_featurs() {
 
           {/* text h */}
           <div>
-            <h2 className=" text-[48px] text-[#FBFBFB] font-semibold ">
+            <h2 className=" md:text-[48px] text-[32px] text-[#FBFBFB] font-semibold ">
               And many other features
             </h2>
           </div>

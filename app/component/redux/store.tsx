@@ -3,6 +3,7 @@
 import { configureStore, useDispatch } from "@reduxjs/toolkit";
 import counterSlice from "./slices/counterSlice";
 import txtrefSlice from "./slices/txtref";
+import userpageSlice from "./slices/userpageSlice";
 
 import { TypedUseSelectorHook, useSelector } from "react-redux";
 
@@ -10,6 +11,7 @@ export const store = configureStore({
   reducer: {
     counter: counterSlice,
     txtrefSlice,
+    userpage: userpageSlice,
   },
   devTools: true,
 });
@@ -20,7 +22,3 @@ export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 export const useAppDispatch: () => AppDispatch = useDispatch;
-
-
-
-
