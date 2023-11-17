@@ -88,7 +88,9 @@ export default function Price_grid({
 
             <h3 className=" h-[103px]  flex    ">
               <p className="text-[40px] ">
-                {active === "yearly" && item.year}
+                {(active === "yearly") & (item.year === 0)
+                  ? item.year
+                  : "Custom"}
                 {active === "montly" && item.mon}
 
                 <span className="text-[16px] text-[rgb(155,156,161)]  ">
