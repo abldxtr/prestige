@@ -1,5 +1,7 @@
 import { AiOutlineCheck } from "react-icons/ai";
 import { CgTally } from "react-icons/cg";
+import classNames from "classnames";
+
 export default function Price_grid({
   active,
 }: {
@@ -86,12 +88,15 @@ export default function Price_grid({
               </p>
             </div>
 
-            <h3 className=" h-[103px]  flex    ">
-              <p className="text-[40px] ">
-                {(active === "yearly") & (item.year === 0)
-                  ? item.year
-                  : "Custom"}
-                {active === "montly" && item.mon}
+            <h3 className=" h-[103px]  flex items-center justify-center    ">
+              <p
+                className={classNames(
+                  index !== 2 ? "text-[40px] " : "text-[32px]",
+                )}
+              >
+                {(active === "yearly") & (index < 2) ? item.year : null}
+                {(active === "montly") & (index < 2) ? item.mon : null}
+                {index === 2 && "Custom"}
 
                 <span className="text-[16px] text-[rgb(155,156,161)]  ">
                   {index !== 2 && "/month"}{" "}
