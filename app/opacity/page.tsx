@@ -101,7 +101,7 @@ export default function Page() {
                 Archive
               </button>
             </div>
-            <motion.div className="max-h-[400px] overflow-y-auto scrollbar scrollbar-hidden scrollbar-thumb-gray-900 scrollbar-track-gray-100 scrollbar-thumb-rounded-full scrollbar-thin py-2  ">
+            <motion.div className="max-h-[400px] overflow-y-auto scrollbar-hidden scrollbar-thumb-gray-900 scrollbar-track-gray-100 scrollbar-thumb-rounded-full scrollbar-thin py-2  ">
               <motion.ul className="mx-2 rounded-medium">
                 <AnimatePresence initial={false}>
                   {[...txt].reverse().map((message, index) => {

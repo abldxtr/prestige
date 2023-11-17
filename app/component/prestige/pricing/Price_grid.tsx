@@ -1,10 +1,15 @@
 import { AiOutlineCheck } from "react-icons/ai";
 import { CgTally } from "react-icons/cg";
-export default function Price_grid() {
+export default function Price_grid({
+  active,
+}: {
+  active: "montly" | "yearly";
+}) {
   type price = {
     head: string;
     subhead: string;
-    num: string;
+    mon: number;
+    yeaer: number;
     subitems: string[];
     doc: string;
   };
@@ -14,7 +19,8 @@ export default function Price_grid() {
       head: "starter",
       subhead:
         "For driven individuals who want to start with essential features and resources to kickstart your journey.",
-      num: "$9",
+      mon: 9,
+      year: 99,
       subitems: [
         "Standart analytics",
         "Limited tracking",
@@ -28,7 +34,8 @@ export default function Price_grid() {
       head: "Pro",
       subhead:
         "For ambitious professionals who require more innovative and additional tools to stay ahead of the competition.",
-      num: "$19",
+      mon: 19,
+      year: 149,
       subitems: [
         "Advanced analytics",
         "Unlimited tracking",
@@ -42,7 +49,9 @@ export default function Price_grid() {
       head: "Enterprise",
       subhead:
         "For companies who want advanced features with specific needs to achieve better business results.",
-      num: "Custom",
+      mon: 0,
+      year: 0,
+
       subitems: [
         "Advanced analytics",
         "Unlimited tracking",
@@ -77,14 +86,15 @@ export default function Price_grid() {
               </p>
             </div>
 
-            <h3 className="text-[40px] h-[103px]  flex    ">
-              <div className="flex  ">
-                {item.num}
+            <h3 className=" h-[103px]  flex    ">
+              <p className="text-[40px] ">
+                {active === "yearly" && item.year}
+                {active === "montly" && item.mon}
 
-                <span className="text-[16px] text-[rgb(155,156,161)] flex self-center pb-5  ">
+                <span className="text-[16px] text-[rgb(155,156,161)]  ">
                   {index !== 2 && "/month"}{" "}
                 </span>
-              </div>
+              </p>
             </h3>
             <div className="h-[1px] w-[272px] bg-[rgb(36,36,36)] " />
 
