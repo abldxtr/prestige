@@ -3,7 +3,7 @@ import { CgTally } from "react-icons/cg";
 export default function Price_grid() {
   type price = {
     head: string;
-    subhead: stirng;
+    subhead: string;
     num: string;
     subitems: string[];
     doc: string;

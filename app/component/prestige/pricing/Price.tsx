@@ -34,6 +34,16 @@ export default function Price() {
           </div>
         </div>
 
+        {/* price tab */}
+        <div className="flex items-center justify-center">
+          <div>
+            <h6>Montly</h6>
+          </div>
+          <div>
+            <h6>Yearly</h6>
+          </div>
+        </div>
+
         {/* second col */}
         <div className="w-full  ">
           <div className="flex items-center justify-between ">

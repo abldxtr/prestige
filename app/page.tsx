@@ -11,7 +11,7 @@ import Footer from "./component/prestige/footer/Footer";
 export default function Home() {
   return (
     <>
-      <main className="relative h-full w-full bg-[rgb(15_15_15)]">
+      <main className="relative h-full w-full bg-[rgb(15_15_15)]  ">
         {/* <!-- main --> */}
 
         <div className="relative w-full   bg-blue-400">
