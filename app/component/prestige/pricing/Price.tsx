@@ -37,7 +37,9 @@ export default function Price() {
         {/* price tab */}
         <div className="flex items-center justify-center">
           <div>
-            <h6>Montly</h6>
+            <h6 className="text-[16px] font-bold text-[rgb(251,251,251)]  ">
+              Montly
+            </h6>
           </div>
           <div>
             <h6>Yearly</h6>
