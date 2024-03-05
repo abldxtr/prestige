@@ -2,7 +2,7 @@
 import { createSlice, PayloadAction, current, nanoid } from "@reduxjs/toolkit";
 
 export type sss = {
-  id: number;
+  id: string;
   value: string;
 };
 

@@ -32,10 +32,11 @@ export default function Page(){
 
 
   <div className="relative pt-32">
-    <div className=" bg-[url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='rgb(255 255 255 / 0.1)' viewBox='0 0 64 64'%3E%3Cpath d='M64 0H0v64'/%3E%3C/svg%3E");] pointer-events-none absolute inset-0 bg-center [mask-image:radial-gradient(white,transparent_85%)]"></div>
+    <div className=" bg-[url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='rgb(255 255 255 / 0.1)' viewBox='0 0 64 64'%3E%3Cpath d='M64 0H0v64'/%3E%3C/svg%3E")] pointer-events-none absolute inset-0 bg-center [mask-image:radial-gradient(white,transparent_85%)]"></div>
 
+  
     <div className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-16">
-      <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center">
         <h1 className="text-center text-3xl font-light leading-tight lg:text-5xl">
           Yet another ChatGPT <br />
           wrapper <span className="bg-gradient-to-br from-white/90 to-white/30 bg-clip-text text-transparent">built different</span>
@@ -51,7 +52,7 @@ export default function Page(){
         </div>
       </div>
     </div>
-  </div>
+  
 
 
   <div className="scroll-mt-8 py-8 lg:py-16">

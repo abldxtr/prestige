@@ -1,9 +1,8 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Providers from "./component/redux/Providers";
-import { store } from "./component/redux/Redux";
 import P_header from "./component/prestige/P_header";
-import { Reactqueryprovider } from "./Provider-query.tsx";
+import { Reactqueryprovider } from "./Provider-query";
 import { DM_Sans } from "next/font/google";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
