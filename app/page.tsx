@@ -14,7 +14,7 @@ export default function Home() {
       <main className="relative h-full w-full bg-[rgb(15_15_15)]  ">
         {/* <!-- main --> */}
 
-        <div className="relative w-full   bg-blue-400">
+        <div className="relative w-full ">
           <div className="bgmain absolute h-[800px] inset-x-0   " />
 
           <div className="mx-w-[1200px] mx-auto bg-[rgb(15,15,15)] px-[30px] pt-[200px] pb-[120px] overflow-hidden ">
