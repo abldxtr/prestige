@@ -87,6 +87,9 @@ export default function Other_featurs_items() {
                       ii === 0 && "group/shine relative w-full h-full ",
                       ii === 1 && "w-full  relative",
                       ii === 2 && "w-full h-full  relative",
+                      ii === 3 && "w-full h-full  relative",
+                      ii == 4 &&
+                        "aspect-square mx-auto h-full flex items-center p-6 justify-center  border border-[rgb(36,_36,_36)] rounded-full bg-[rgb(23,_23,_23)]  ",
                     )}
                   >
                     {ii === 0 && (
@@ -159,11 +162,11 @@ export default function Other_featurs_items() {
                             {/* first */}
                             <div className="flex gap-[10px] items-center justify-center ">
                               {/* 1 */}
-                              <div className="w-[64px] h-[64px] flex items-center justify-center bg-[rgb(15,15,15)] border border-[rgb(36,36,36)] rounded-[8px] ">
+                              <div className="w-[64px] h-[64px] flex items-center justify-center bg-[radial-gradient(59.2%_59.2%_at_50%_50%,_rgb(43,_43,_43)_0%,_rgb(26,_26,_26)_100%)] cursor-pointer border border-[rgb(36,36,36)] rounded-[8px] ">
                                 <SiKeystone className="fill-[rgb(155,156,161)]  w-[24px] h-[24px] " />
                               </div>
                               {/* 2 */}
-                              <div className="w-[64px] h-[64px] flex items-center justify-center bg-[rgb(15,15,15)] border border-[rgb(36,36,36)] rounded-[8px] ">
+                              <div className="w-[64px] h-[64px] flex items-center justify-center  bg-[radial-gradient(59.2%_59.2%_at_50%_50%,_rgb(43,_43,_43)_0%,_rgb(26,_26,_26)_100%)] cursor-pointer border border-[rgb(36,36,36)] rounded-[8px] ">
                                 <CiBullhorn className="fill-[rgb(155,156,161)] w-[24px] h-[24px] " />
                               </div>
                             </div>
@@ -180,12 +183,12 @@ export default function Other_featurs_items() {
                     )}
 
                     {ii === 3 && (
-                      <div className="flex pt-[24px] pl-[24px] mx-auto  border border-[rgb(36,36,36)] rounded-[12px] bg-[rgb(26,26,26)] w-[232px] h-[264px]">
-                        <div className=" flex flex-col items-center justify-start gap-[16px]  ">
-                          <p className="text-[rgb(251,251,251)] text-[16px] ">
+                      <div className="flex pt-[24px] pl-[24px]   border border-[rgb(36,36,36)] rounded-[12px] bg-[rgb(26,26,26)] h-[264px]">
+                        <div className=" flex flex-col  justify-start gap-[16px]  ">
+                          <p className="text-[rgb(251,251,251)] leading-[1.4em] text-left text-[16px] ">
                             Prepare pitch for{" "}
                           </p>
-                          <div className="flex gap-[8px] flex-col ">
+                          <div className="flex gap-[8px] flex-col pl-[16px] ">
                             <p className="text-[rgb(155,156,161)] text-[14px] ">
                               The market opportunity
                             </p>
@@ -199,21 +202,26 @@ export default function Other_featurs_items() {
                         </div>
                       </div>
                     )}
-                    <div>
-                      {/* {typeof item.img[0] === "string" && ii !== 4 ? (
-                        <img
-                          src={item.img[0]}
-                          alt="features"
-                          className="pt-6"
-                        />
-                      ) : (
-                        ""
-                      )} */}
-                      {/* {ii === 4 && typeof item.img[0] === "string"
-                        ? item.img.map((item, i) => {
-                            return <img src={item} alt="sss" />;
-                          })
-                        : ""} */}
+                    <div className="flex -space-x-5 items-center h-full w-full justify-center z-10 border border-[rgb(36,_36,_36)] rounded-full bg-[rgb(26,_26,_26)] ">
+                      {ii == 4 &&
+                        [
+                          "https://framerusercontent.com/images/yulEa3NmoSWAEqkLbPpkngnGN0.png",
+                          "https://framerusercontent.com/images/HnGuBDJggDB1ToZs9w6c2o8kEe8.png",
+                          "https://framerusercontent.com/images/8RmU8J3M24uuREshsnYeVxWlgoQ.png",
+                          "https://framerusercontent.com/images/kIc1rOcumToPSAjiYXIWdWYFMo.png",
+                          "https://framerusercontent.com/images/r9F0B6SFfgSyAOJsqCeT5LcoFQ.png",
+                        ].map((img, index) => {
+                          return (
+                            <>
+                              <img
+                                key={index}
+                                src={img}
+                                alt="features"
+                                className=" w-[40px] h-[40px] rounded-full  "
+                              />
+                            </>
+                          );
+                        })}
                     </div>
                   </div>
                 </div>
