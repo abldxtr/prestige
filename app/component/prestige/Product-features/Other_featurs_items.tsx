@@ -1,3 +1,5 @@
+import { SiKeystone } from "react-icons/si";
+import { CiBullhorn } from "react-icons/ci";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import classNames from "classnames";
 import {
@@ -58,16 +60,36 @@ export default function Other_featurs_items() {
     <>
       {feats_items.map((item, ii) => {
         return (
-          <div className="p-[40px] group/nem rounded-[24px] border border-[rgb(36,36,36)] bg-[rgb(22,22,22)] first:col-span-2 ">
+          <div
+            key={ii}
+            className={classNames(
+              "p-[40px] group/nem rounded-[24px] border border-[rgb(36,36,36)] bg-[rgb(22,22,22)] first:col-span-2  ",
+              "col-span-2 sm:col-span-1",
+              // ii === 1 && "col-span-1  ",
+              // ii === 2 && "col-span-1 ",
+              // ii === 3 && "col-span-1 ",
+            )}
+          >
             <div className="flex flex-col gap-[32px]  ">
-              {/* first */}
-              <div className="h-[264px] min-w-[220px] overflow-hidden relative border border-[rgb(36,36,36)] bg-[rgb(26,26,26)] rounded-[12px] ">
+              {/* border border-[rgb(36,36,36)] h-[264px] bg-[rgb(26,26,26)]*/}
+              {/* first 1 */}
+              <div
+                className={classNames(
+                  "  overflow-hidden relative h-[264px]   rounded-[12px] ",
+                  ii === 0 && "border border-[rgb(36,36,36)]",
+                  ii === 1 && "border border-[rgb(36,36,36)]",
+                )}
+              >
                 <div className=" w-full h-full relative ">
                   <div
                     className={classNames(
                       "  ",
                       ii === 0 && "group/shine relative w-full h-full ",
-                      ii === 1 && "w-full h-full relative",
+                      ii === 1 && "w-full  relative",
+                      ii === 2 && "w-full h-full  relative",
+                      ii === 3 && "w-full h-full  relative",
+                      ii == 4 &&
+                        "aspect-square mx-auto h-full flex items-center p-6 justify-center  border border-[rgb(36,_36,_36)] rounded-full bg-[rgb(23,_23,_23)]  ",
                     )}
                   >
                     {ii === 0 && (
@@ -87,7 +109,7 @@ export default function Other_featurs_items() {
                         </div>
                         {typeof item.img[0] === "string" && (
                           <div className="relative w-full h-full">
-                            <div className=" w-[89%] w-full h-[517px] mx-auto relative h-full ">
+                            <div className=" w-[89%]  h-[517px] mx-auto relative ">
                               <div className="absolute inset-0 ">
                                 <img
                                   src={item.img[0]}
@@ -102,7 +124,7 @@ export default function Other_featurs_items() {
                     )}
 
                     {ii === 1 && (
-                      <div className=" px-[32px] pt-[12px] h-[264px] relative flex flex-col flex-start ">
+                      <div className=" px-[32px] pt-[12px] h-[264px] relative flex flex-col flex-start w-full ">
                         <div className="flex items-center text-[#33c6AB] gap-[8px] justify-start ">
                           {/* icone */}
                           <div className="w-[24px] flex items-center justify-center h-[24px] rounded-full border border-[rgb(35,100,86)] bg-[rgb(17,34,32)] ">
@@ -125,7 +147,7 @@ export default function Other_featurs_items() {
                               <img
                                 src={item.img[0]}
                                 alt="features"
-                                className="w-full h-full object-cover object-center  "
+                                className="w-full h-full object-cover object-center scale-125 sm:scale-100  "
                               />
                             )}
                           </div>
@@ -133,29 +155,73 @@ export default function Other_featurs_items() {
                       </div>
                     )}
 
-                    {
-                      ii === 2 && (
-                        <div>
+                    {ii === 2 && (
+                      <div className="flex items-center justify-center w-full h-full ">
+                        <div className="w-[180px] h-[140px] bg-[rgb(26,26,26)] border border-[rgb(34,34,34)] rounded-[12px] ">
+                          <div className="flex flex-col items-center justify-center h-full gap-[24px] ">
+                            {/* first */}
+                            <div className="flex gap-[10px] items-center justify-center ">
+                              {/* 1 */}
+                              <div className="w-[64px] h-[64px] flex items-center justify-center bg-[radial-gradient(59.2%_59.2%_at_50%_50%,_rgb(43,_43,_43)_0%,_rgb(26,_26,_26)_100%)] cursor-pointer border border-[rgb(36,36,36)] rounded-[8px] ">
+                                <SiKeystone className="fill-[rgb(155,156,161)]  w-[24px] h-[24px] " />
+                              </div>
+                              {/* 2 */}
+                              <div className="w-[64px] h-[64px] flex items-center justify-center  bg-[radial-gradient(59.2%_59.2%_at_50%_50%,_rgb(43,_43,_43)_0%,_rgb(26,_26,_26)_100%)] cursor-pointer border border-[rgb(36,36,36)] rounded-[8px] ">
+                                <CiBullhorn className="fill-[rgb(155,156,161)] w-[24px] h-[24px] " />
+                              </div>
+                            </div>
 
+                            {/* second */}
+                            <div>
+                              <p className="text-[14px] text-[rgb(155,156,161)] ">
+                                Command menu
+                              </p>
+                            </div>
+                          </div>
                         </div>
-                      )
-                    }
+                      </div>
+                    )}
 
-                    <div>
-                      {/* {typeof item.img[0] === "string" && ii !== 4 ? (
-                        <img
-                          src={item.img[0]}
-                          alt="features"
-                          className="pt-6"
-                        />
-                      ) : (
-                        ""
-                      )} */}
-                      {/* {ii === 4 && typeof item.img[0] === "string"
-                        ? item.img.map((item, i) => {
-                            return <img src={item} alt="sss" />;
-                          })
-                        : ""} */}
+                    {ii === 3 && (
+                      <div className="flex pt-[24px] pl-[24px]   border border-[rgb(36,36,36)] rounded-[12px] bg-[rgb(26,26,26)] h-[264px]">
+                        <div className=" flex flex-col  justify-start gap-[16px]  ">
+                          <p className="text-[rgb(251,251,251)] leading-[1.4em] text-left text-[16px] ">
+                            Prepare pitch for{" "}
+                          </p>
+                          <div className="flex gap-[8px] flex-col pl-[16px] ">
+                            <p className="text-[rgb(155,156,161)] text-[14px] ">
+                              The market opportunity
+                            </p>
+                            <p className="text-[rgb(155,156,161)] text-[14px] ">
+                              How the product works
+                            </p>
+                            <p className="text-[rgb(155,156,161)] text-[14px] ">
+                              Our business model
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    <div className="flex -space-x-5 items-center h-full w-full justify-center z-10 border border-[rgb(36,_36,_36)] rounded-full bg-[rgb(26,_26,_26)] ">
+                      {ii == 4 &&
+                        [
+                          "https://framerusercontent.com/images/yulEa3NmoSWAEqkLbPpkngnGN0.png",
+                          "https://framerusercontent.com/images/HnGuBDJggDB1ToZs9w6c2o8kEe8.png",
+                          "https://framerusercontent.com/images/8RmU8J3M24uuREshsnYeVxWlgoQ.png",
+                          "https://framerusercontent.com/images/kIc1rOcumToPSAjiYXIWdWYFMo.png",
+                          "https://framerusercontent.com/images/r9F0B6SFfgSyAOJsqCeT5LcoFQ.png",
+                        ].map((img, index) => {
+                          return (
+                            <>
+                              <img
+                                key={index}
+                                src={img}
+                                alt="features"
+                                className=" w-[40px] h-[40px] rounded-full  "
+                              />
+                            </>
+                          );
+                        })}
                     </div>
                   </div>
                 </div>

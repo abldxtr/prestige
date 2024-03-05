@@ -17,7 +17,7 @@ export default function P_header() {
     setmenue(item);
   }
   return (
-    <div className="fixed left-0 top-0 z-50 w-full border-b border-[#161616] bg-[rgb(15_15_15)]">
+    <div className="fixed left-0 top-0 z-[100] w-full border-b border-[#161616] bg-[rgb(15_15_15)]">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-[32px] py-[16px]">
         {/* <!-- left --> */}
 
