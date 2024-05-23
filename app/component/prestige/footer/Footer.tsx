@@ -1,5 +1,5 @@
 "use client";
-import { BsTwitterX } from "react-icons/bs";
+// import { BsTwitterX } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
@@ -43,7 +43,10 @@ export default function Footer() {
                     </div>
                     {item.body.map((itemm, index) => {
                       return (
-                        <li key={index} className="!p-0 text-[rgb(155,156,161)] hover:text-[rgb(251,251,251)] transition cursor-pointer  ">
+                        <li
+                          key={index}
+                          className="!p-0 text-[rgb(155,156,161)] hover:text-[rgb(251,251,251)] transition cursor-pointer  "
+                        >
                           {itemm}
                         </li>
                       );
