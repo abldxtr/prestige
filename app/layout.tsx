@@ -1,19 +1,8 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Providers from "./component/redux/Providers";
-import { store } from "./component/redux/Redux";
 import P_header from "./component/prestige/P_header";
-import { Reactqueryprovider } from "./Provider-query.tsx";
 import { DM_Sans } from "next/font/google";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-import {
-  useQuery,
-  useMutation,
-  useQueryClient,
-  QueryClient,
-  QueryClientProvider,
-} from "@tanstack/react-query";
 const dm_sans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dmsans",
@@ -39,17 +28,13 @@ export default function RootLayout({
           content="width=device-width, height=device-height, initial-scale=1"
         />
       </head>
-      <Reactqueryprovider>
-        <body className={dm_sans.className}>
-          <Providers>
-            <div>
-              <P_header />
-              {children}
-            </div>
-          </Providers>
-        </body>
-        {/* <ReactQueryDevtools initialIsOpen={false} /> */}
-      </Reactqueryprovider>
+      <body className={dm_sans.className}>
+        <div>
+          <P_header />
+          {children}
+        </div>
+      </body>
+      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
     </html>
   );
 }
