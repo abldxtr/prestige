@@ -34,12 +34,15 @@ export default function Other_featurs_items() {
       text: "Make informed decisions backed by data through our analytics tools.",
     },
     {
-      img: [<CgPresentation />, <CgPresentation />],
+      // img: [<CgPresentation />, <CgPresentation />],
+      img: [""],
       header: "Keyboard shortcuts",
       text: "Take control of your workflow and tasks with our intuitive keyboard shortcuts.",
     },
     {
-      img: [<CgSmartHomeBoiler />],
+      // img: [<CgSmartHomeBoiler />],
+      img: [""],
+
       header: "Edit together",
       text: "Boost efficiency and ensure accuracy as you collectively refine your work.",
     },
