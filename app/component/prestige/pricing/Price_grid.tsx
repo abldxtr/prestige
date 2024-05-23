@@ -1,17 +1,20 @@
 import { AiOutlineCheck } from "react-icons/ai";
 import { CgTally } from "react-icons/cg";
 import classNames from "classnames";
+import { motion } from "framer-motion";
 
-export default function Price_grid({
-  active,
-}: {
-  active: "montly" | "yearly";
-}) {
+// type act = "yearly" | "montly" as const;
+export enum act {
+  yearly = "yearly",
+  montly = "montly",
+}
+
+export default function Price_grid({ active }: { active: act }) {
   type price = {
     head: string;
     subhead: string;
     mon: number;
-    yeaer: number;
+    year: number;
     subitems: string[];
     doc: string;
   };
@@ -69,7 +72,7 @@ export default function Price_grid({
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-[32px] text-white max-w-[1280px] mx-auto ">
       {items.map((item, index) => {
         return (
-          <div
+          <motion.div
             key={item.head}
             className="p-[30px]  relative pt-[72px] border border-[rgb(36,36,36)] bg-[rgb(22,22,22)] rounded-[24px] flex flex-col gap-[48px]  items-center justify-center "
           >
@@ -89,19 +92,21 @@ export default function Price_grid({
             </div>
 
             <h3 className=" h-[103px]  flex items-center justify-center    ">
-              <p
+              <motion.p
+                transition={{ type: "spring", duration: 0.6 }}
+                // layoutId="priz"
                 className={classNames(
                   index !== 2 ? "text-[40px] " : "text-[32px]",
                 )}
               >
-                {(active === "yearly") & (index < 2) ? item.year : null}
-                {(active === "montly") & (index < 2) ? item.mon : null}
+                {active === "yearly" && index < 2 ? item.year : null}
+                {active === "montly" && index < 2 ? item.mon : null}
                 {index === 2 && "Custom"}
 
                 <span className="text-[16px] text-[rgb(155,156,161)]  ">
                   {index !== 2 && "/month"}{" "}
                 </span>
-              </p>
+              </motion.p>
             </h3>
             <div className="h-[1px] w-[272px] bg-[rgb(36,36,36)] " />
 
@@ -123,7 +128,7 @@ export default function Price_grid({
             <button className="w-full border border-[rgb(59,59,59)] bg-[rgb(31,31,31)] rounded-[64px] py-[16px] px-[32px] text-[rgb(251,251,251)] hover:bg-[rgb(48,48,48)] hover:border-[rgb(59,59,59)] transition ">
               {item.doc}
             </button>
-          </div>
+          </motion.div>
         );
       })}
     </div>

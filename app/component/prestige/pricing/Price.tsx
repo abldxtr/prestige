@@ -4,9 +4,14 @@ import Price_grid from "./Price_grid";
 import { useState } from "react";
 import classNames from "classnames";
 import { motion } from "framer-motion";
+import { act } from "./Price_grid";
 
 export default function Price() {
-  const [active, setActive] = useState("montly");
+  enum actt {
+    yearly = "yearly",
+    montly = "montly",
+  }
+  const [active, setActive] = useState<act>(act.montly);
   return (
     <div className="mx-w-[1280px] mx-auto  ">
       <div className="flex flex-col gap-[96px] items-center justify-center  px-[20px] sm:px-[30px] ">
@@ -41,7 +46,7 @@ export default function Price() {
 
         {/* price tab */}
         <div className="flex items-center justify-center gap-[10px] p-[4px] border-[rgb(36,36,36)] bg-[rgb(22,22,22)] rounded-[25px] ">
-          <div onClick={() => setActive("montly")} className="relative">
+          <div onClick={() => setActive(act.montly)} className="relative">
             <h6
               className={classNames(
                 "text-[16px] font-medium rounded-[24px] py-[8px] px-[16px] z-10 transiton     ",
@@ -65,7 +70,7 @@ export default function Price() {
               />
             )}
           </div>
-          <div onClick={() => setActive("yearly")} className="relative z-1">
+          <div onClick={() => setActive(act.yearly)} className="relative z-1">
             <h6
               className={classNames(
                 "text-[16px] font-medium rounded-[24px] py-[8px] px-[16px] z-10 transition    ",
@@ -94,6 +99,7 @@ export default function Price() {
         {/* second col */}
         <div className="w-full  ">
           <div className="flex items-center justify-between ">
+            {/* fix the bug blow */}
             <Price_grid active={active} />
           </div>
         </div>
