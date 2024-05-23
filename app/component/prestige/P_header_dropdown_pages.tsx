@@ -23,11 +23,15 @@ export default function Dropdown_pages() {
       <div className="p-[32px] w-[600px] flex ">
         {dp_menus.map((item, index) => {
           return (
-            <div className="flex grow-1 flex-1  ">
+            <div key={index} className="flex grow-1 flex-1  ">
               <ul className="flex flex-col flex-1 gap-[16px]  ">
                 <div>{item.header}</div>
                 {item.body.map((itemm, index) => {
-                  return <li className="!p-0">{itemm}</li>;
+                  return (
+                    <li key={index} className="!p-0">
+                      {itemm}
+                    </li>
+                  );
                 })}
               </ul>
             </div>
