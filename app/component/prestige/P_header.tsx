@@ -100,7 +100,7 @@ export default function P_header() {
                           <P_dropdown />
                         </div>
                         <motion.span
-                          className=" absolute top-5 -left-2 z-[200] w-20 h-7 bg-red-500  "
+                          className=" absolute top-5 -left-2 z-[200] w-20 h-7   "
                           // ref={submenuSafeAreaRef}
                           // onMouseEnter={(e) => handle_menue(item, e)}
                           onMouseMove={() => setmenue(item)}
@@ -125,7 +125,7 @@ export default function P_header() {
                           <Dropdown_pages />
                         </div>
                         <motion.span
-                          className=" absolute top-5 -left-2 z-[200] w-20 h-7 bg-red-500  "
+                          className=" absolute top-5 -left-2 z-[200] w-20 h-7 "
                           // ref={submenuSafeAreaRef}
                           onMouseMove={() => setmenue(item)}
                           // onMouseLeave={() => setmenue("")}
