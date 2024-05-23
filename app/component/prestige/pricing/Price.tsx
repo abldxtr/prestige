@@ -31,7 +31,7 @@ export default function Price() {
             {/* text p */}
             <div>
               <p className="text-[#9b9ca1] text-[18px] font-normal  ">
-                Whether you're a small startup, a growing mid-sized business, or
+                Whether youre a small startup, a growing mid-sized business, or
                 a large enterprise, we have plans tailored to your specific
                 demands.
               </p>

@@ -15,7 +15,7 @@ export default function Pavatar_pic() {
           <div className="m-[5px] flex min-h-[40px] min-w-[100px] items-center justify-center">
             {img_items.map((item, index) => {
               return (
-                <div className="avatar -ml-[12px]  ">
+                <div key={index} className="avatar -ml-[12px]  ">
                   <Image
                     src={item}
                     alt="avatr"

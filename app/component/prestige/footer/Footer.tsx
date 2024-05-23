@@ -36,14 +36,14 @@ export default function Footer() {
           <div className="sm:p-[32px] p-0 w-full flex sm:flex-row flex-col gap-[56px] sm:gap-0 ">
             {dp_menus.map((item, index) => {
               return (
-                <div className="flex sm:flex-row flex-col flex-1  ">
+                <div key={index} className="flex sm:flex-row flex-col flex-1  ">
                   <ul className="flex flex-col flex-1 gap-[16px]  ">
                     <div className="text-[16px] text-[rgb(251,251,251)] cursor-normal ">
                       {item.header}
                     </div>
                     {item.body.map((itemm, index) => {
                       return (
-                        <li className="!p-0 text-[rgb(155,156,161)] hover:text-[rgb(251,251,251)] transition cursor-pointer  ">
+                        <li key={index} className="!p-0 text-[rgb(155,156,161)] hover:text-[rgb(251,251,251)] transition cursor-pointer  ">
                           {itemm}
                         </li>
                       );

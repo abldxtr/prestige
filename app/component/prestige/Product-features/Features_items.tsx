@@ -50,7 +50,10 @@ export default function Features_items() {
     <>
       {feat_items.map((item, index) => {
         return (
-          <div className="p-[40px] rounded-[24px] border border-[rgb(36,36,36)] bg-[rgb(22,22,22)] ">
+          <div
+            key={index}
+            className="p-[40px] rounded-[24px] border border-[rgb(36,36,36)] bg-[rgb(22,22,22)] "
+          >
             <div className="flex flex-col gap-[10px] ">
               <div className=" text-[#FBFBFB] text-[24px]  ">{item.icone} </div>
               <div className="flex flex-col gap-[8px] ">
