@@ -1,9 +1,11 @@
 import Mousemove from "../component/Mousemove";
+// import Mousemovee from "../component/Mousemovee";
 
 export default function page() {
   return (
     <>
-      <div className="my-8 md:my-16 bg-gray-400">
+      <div className="my-8 md:my-16 bg-gray-400 w-full h-screen ">
+        {/* <Mousemovee /> */}
         <Mousemove />
       </div>
     </>

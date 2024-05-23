@@ -21,6 +21,14 @@ export default function Mousemove() {
   let blurxm2 = useMotionValue(20);
   let blurxm3 = useMotionValue(20);
 
+  let x = useMotionValue(0);
+  let y = useMotionValue(0);
+  const prop = { mass: 0.4, stiffness: 350, damping: 40 };
+  // what is damping explain it
+  //
+  let xSmooth = useSpring(x, prop);
+  let ySmooth = useSpring(y, prop);
+
   const first = useRef<HTMLDivElement>(null);
   const second = useRef<HTMLDivElement>(null);
   const third = useRef<HTMLDivElement>(null);
@@ -37,32 +45,67 @@ export default function Mousemove() {
 
   function handleMouseMove(e: MouseEvent) {
     let { left, top, width, height } = e.currentTarget.getBoundingClientRect();
-    // let { } = e.
+
+    x.set(e.clientX - left);
+    y.set(e.clientY - top);
     const reff1 = first.current?.offsetLeft;
     const reff2 = second.current?.offsetLeft;
     const reff3 = third.current?.offsetLeft;
+    // const reff1 = first.current?.offsetWidth;
+    // const reff2 = second.current?.offsetWidth;
+    // const reff3 = third.current?.offsetWidth;
+    // console.log("reff1", reff1);
+    // console.log("reff2", reff2);
+    // console.log("reff3", reff3);
 
-    let xPosition = e.pageX - left;
-    let xPosition2 = e.pageX - (200 + left);
-    let xPosition3 = e.pageX - (400 + left);
+    // console.log("e.client", e.pageX, e.clientX, left, top, width, height);
+
+    if (
+      first.current !== undefined &&
+      first.current !== null &&
+      second.current !== undefined &&
+      second.current !== null &&
+      third.current !== undefined &&
+      third.current !== null
+    ) {
+      console.log("unnnndddd", first.current.offsetWidth);
+      let xPosition = e.pageX - left;
+      console.log("xPosition", xPosition);
+
+      let xPosition2 =
+        e.pageX -
+        (second.current.offsetLeft + left) +
+        second.current.offsetWidth / 2;
+      console.log("xPosition2", xPosition2);
+
+      let xPosition3 =
+        e.pageX -
+        (third.current.offsetLeft + left) +
+        third.current.offsetWidth / 2;
+      mouseXx11.set(xPosition / left);
+      mouseXx22.set(xPosition2 / left);
+      mouseXx33.set(xPosition3 / left);
+      blurxm1.set(20 - (xPosition / left) * 20);
+      blurxm2.set(20 - (xPosition2 / left) * 20);
+      blurxm3.set(20 - (xPosition3 / left) * 20);
+    }
+
+    // let xPosition = e.pageX - left;
+    // let xPosition2 = e.pageX - 2 * left;
+    // let xPosition3 = e.pageX - 3 * left;
     // console.log(xPosition, xPosition2, xPosition3);
+    // 598.671875 398.671875 198.671875
     // console.log(left, "ffff");
 
     // var pp = e.o
     // var yPosition = e.clientY - top;
-    mouseXx11.set(xPosition / 206);
-    mouseXx22.set(xPosition2 / 206);
-    mouseXx33.set(xPosition3 / 206);
 
     // mouseYx.set(yPosition / height);
-    blurxm1.set(20 - (xPosition / 206) * 10 * 2);
-    blurxm2.set(20 - (xPosition2 / 206) * 10 * 2);
-    blurxm3.set(20 - (xPosition3 / 206) * 10 * 2);
 
     // var opaci = useMotionTemplate`${mouseXx}`;
     // console.log(30 - (xPosition / width) * 10 * 2);
 
-    console.log(reff1, reff2, reff3);
+    // console.log(reff1, reff2, reff3);
 
     //
 
@@ -82,9 +125,17 @@ export default function Mousemove() {
   return (
     <div className="grid grid-cols-9  gap-[24px] bg-black ">
       <motion.div
-        className=" col-start-2 col-span-7 bg-[#1d1c20] border border-[#ffffff14] rounded-[24px]   "
+        className=" col-start-3 relative col-span-5 bg-[#1d1c20] border border-[#ffffff14] rounded-[24px]   "
         onMouseMove={handleMouseMove}
       >
+        <motion.div
+          className=" absolute z-[100] w-4 h-8 rounded-full bg-gray-600 "
+          style={{
+            left: xSmooth,
+
+            top: ySmooth,
+          }}
+        />
         <motion.div className="relative  overflow-hidden min-h-[400px] p-[32px]  w-full  ">
           <div className="max-w-[380px] md:mx-auto md:max-w-full  ">
             <h3 className="text-[20px] font-bold mb-[8px] text-[#FFFFFF] ">
